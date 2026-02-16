@@ -2,9 +2,8 @@ import welcomeMd from '../content/welcome.md?raw'
 import helpMd from '../content/help.md?raw'
 import aboutMd from '../content/about.md?raw'
 import skillsMd from '../content/skills.md?raw'
-import experienceMd from '../content/experience.md?raw'
+import resumeMd from '../content/resume.md?raw'
 import projectsMd from '../content/projects.md?raw'
-import educationMd from '../content/education.md?raw'
 
 export interface CommandOutput {
   markdown: string
@@ -14,10 +13,9 @@ export const commands: Record<string, CommandOutput> = {
   '/help': { markdown: helpMd },
   '/about': { markdown: aboutMd },
   '/skills': { markdown: skillsMd },
-  '/experience': { markdown: experienceMd },
+  '/resume': { markdown: resumeMd },
   '/projects': { markdown: projectsMd },
-  '/education': { markdown: educationMd },
-  '/clear': { markdown: '' },
+  '/reset': { markdown: '' },
 }
 
 export const welcomeMarkdown = welcomeMd
@@ -25,9 +23,8 @@ export const welcomeMarkdown = welcomeMd
 export const commandDescriptions: Record<string, string> = {
   '/about': 'Who am I',
   '/skills': 'Technical skills',
-  '/experience': 'Work history',
+  '/resume': 'Experience & education',
   '/projects': 'Side projects',
-  '/education': 'Education background',
-  '/clear': 'Clear screen',
+  '/reset': 'Clear screen',
   '/help': 'Show available commands',
 }

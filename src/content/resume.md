@@ -1,3 +1,5 @@
+## Experience
+
 ### Senior Front-End Developer — MyWave.AI
 **Dec 2019 – Present**
 React, TypeScript, Redux, Vite
@@ -23,3 +25,11 @@ BackboneJS, CoffeeScript
 ### Freelance Web Designer — StyleCoder.tw
 **Jun 2010 – Feb 2012**
 PSD-to-HTML studio
+
+## Education
+
+### MA Environment and Art
+Nanhua University (2005–2007)
+
+### BS Fiber, Textile and Weaving Arts
+Fu Jen Catholic University (2001–2005)

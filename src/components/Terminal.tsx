@@ -76,8 +76,9 @@ function Terminal() {
       { mode: 'text', content: `❯ ${cmd}`, type: 'command' as const },
     ])
 
-    if (trimmed === '/clear') {
+    if (trimmed === '/reset') {
       setHistory([])
+      await typeBlocks(welcomeMarkdown)
       setTimeout(() => inputRef.current?.focus(), 50)
       return
     }

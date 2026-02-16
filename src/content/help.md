@@ -4,8 +4,7 @@
 |---------|-------------|
 | /about | Who am I |
 | /skills | Technical skills |
-| /experience | Work history |
+| /resume | Experience & education |
 | /projects | Side projects |
-| /education | Education background |
-| /clear | Clear screen |
+| /reset | Clear screen |
 | /help | Show this message |
