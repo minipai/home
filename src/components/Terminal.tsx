@@ -98,7 +98,9 @@ function Terminal() {
   }
 
   return (
-    <div className={styles.terminal} onClick={() => inputRef.current?.focus()}>
+    <div className={styles.terminal} onClick={() => {
+        if (!window.getSelection()?.toString()) inputRef.current?.focus()
+      }}>
       <div className={styles.output}>
         {history.map((entry, i) =>
           entry.mode === 'html' ? (
