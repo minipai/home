@@ -1,0 +1,134 @@
+export interface CommandOutput {
+  lines: string[]
+}
+
+export const commands: Record<string, CommandOutput> = {
+  '/help': {
+    lines: [
+      '',
+      '  Available Commands',
+      '',
+      '  /about        Who am I',
+      '  /skills       Technical skills',
+      '  /experience   Work history',
+      '  /projects     Side projects',
+      '  /education    Education background',
+      '  /clear        Clear screen',
+      '  /help         Show this message',
+      '',
+    ],
+  },
+  '/about': {
+    lines: [
+      '',
+      '  Hi, I\'m Art Pai',
+      '',
+      '  Senior Front-End Engineer based in Melbourne, Australia.',
+      '',
+      '  10+ years of experience building production-grade web',
+      '  applications using React and TypeScript.',
+      '',
+      '  Specialising in SPA architecture, design systems,',
+      '  developer-facing SDKs, and test-driven development.',
+      '',
+      '  Type /skills to see what I work with.',
+      '',
+    ],
+  },
+  '/skills': {
+    lines: [
+      '',
+      '  Core',
+      '  React · TypeScript · JavaScript (ES2015+) · Redux · HTML5 · CSS3/SASS',
+      '',
+      '  Build & Tooling',
+      '  Vite · Vitest · Webpack · Babel · Gulp · Grunt',
+      '',
+      '  Testing',
+      '  TDD · Vitest · Jest',
+      '',
+      '  Architecture',
+      '  SPA · Component-driven development · State management · Design systems',
+      '',
+      '  Other',
+      '  RESTful APIs · GraphQL · SDK development · RWD · SQLite',
+      '',
+      '  Languages',
+      '  Mandarin (native) · English (professional)',
+      '',
+    ],
+  },
+  '/experience': {
+    lines: [
+      '',
+      '  Senior Front-End Developer — MyWave.AI',
+      '  Dec 2019 – Present',
+      '  React, TypeScript, Redux, Vite',
+      '  Built user portal SPA, JS SDK, demo site',
+      '',
+      '  Front-End Developer — Stackla',
+      '  Aug 2016 – Nov 2019',
+      '  React, Redux, GraphQL',
+      '  Built admin panel & UI component library',
+      '',
+      '  Front-End Developer — Bindo',
+      '  Mar 2015 – Jun 2016',
+      '  AngularJS → React migration, merchant dashboard',
+      '',
+      '  Front-End Developer / UI Designer — Biideal',
+      '  Jan 2014 – Mar 2015',
+      '  AngularJS, drag-and-drop admin',
+      '',
+      '  Front-End Developer / Web Designer — Waveface Inc',
+      '  2011 – Dec 2012',
+      '  BackboneJS, CoffeeScript',
+      '',
+      '  Freelance Web Designer — StyleCoder.tw',
+      '  Jun 2010 – Feb 2012',
+      '  PSD-to-HTML studio',
+      '',
+    ],
+  },
+  '/projects': {
+    lines: [
+      '',
+      '  CookDB',
+      '  cookdb.darkcoder.dev',
+      '  Personal recipe manager with AI-assisted recipe generation',
+      '  React + TypeScript + SQLite',
+      '',
+    ],
+  },
+  '/education': {
+    lines: [
+      '',
+      '  MA Environment and Art',
+      '  Nanhua University (2005–2007)',
+      '',
+      '  BS Fiber, Textile and Weaving Arts',
+      '  Fu Jen Catholic University (2001–2005)',
+      '',
+    ],
+  },
+  '/clear': {
+    lines: [],
+  },
+}
+
+export const welcomeLines = [
+  '',
+  '  Art Pai',
+  '  Senior Front-End Engineer',
+  '',
+  '  Welcome to my interactive portfolio.',
+  '  Type /help to see available commands.',
+  '',
+]
+
+export const commandDescriptions: Record<string, string> = {
+  '/about': 'Who am I',
+  '/skills': 'Technical skills',
+  '/experience': 'Work history',
+  '/projects': 'Side projects',
+  '/education': 'Education background'
+}
