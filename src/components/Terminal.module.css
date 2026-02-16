@@ -21,27 +21,13 @@
   line-height: 1.7;
 }
 
-.commandLine {
+.command {
   color: #5de4c7;
   margin-top: 8px;
   margin-bottom: 4px;
 }
 
-.headingLine {
-  color: #e2a04a;
-  font-weight: 700;
-  margin-top: 4px;
-}
-
-.subtitleLine {
-  color: #6b7394;
-}
-
-.accentLine {
-  color: #5de4c7;
-}
-
-.errorLine {
+.error {
   color: #f87171;
 }
 
