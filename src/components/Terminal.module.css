@@ -45,76 +45,6 @@
   color: #f87171;
 }
 
-.inputRow {
-  display: flex;
-  align-items: center;
-  padding: 12px 24px 32px;
-  position: sticky;
-  bottom: 0;
-  background: #1a1a2e;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.menu {
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  right: 0;
-  background: #16213e;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
-  margin: 0 16px 4px;
-  padding: 4px 0;
-  max-height: 300px;
-  overflow-y: auto;
-}
-
-.menuItem {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 16px;
-  cursor: pointer;
-  transition: background 0.1s;
-}
-
-.menuItem:hover,
-.menuItemActive {
-  background: rgba(93, 228, 199, 0.1);
-}
-
-.menuCmd {
-  color: #5de4c7;
-  font-weight: 700;
-}
-
-.menuDesc {
-  color: #6b7394;
-  margin-left: 16px;
-}
-
-.prompt {
-  color: #5de4c7;
-  margin-right: 10px;
-  white-space: nowrap;
-  user-select: none;
-  font-weight: 700;
-}
-
-.input {
-  flex: 1;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: #e2e8f0;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: inherit;
-  caret-color: #5de4c7;
-}
-
-.input::placeholder {
-  color: #3d4560;
-}
-
 @media (max-width: 600px) {
   .terminal {
     padding-top: 24px;
@@ -122,9 +52,5 @@
 
   .output {
     padding: 16px;
-  }
-
-  .inputRow {
-    padding: 10px 16px 24px;
   }
 }
