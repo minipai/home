@@ -130,5 +130,7 @@ export const commandDescriptions: Record<string, string> = {
   '/skills': 'Technical skills',
   '/experience': 'Work history',
   '/projects': 'Side projects',
-  '/education': 'Education background'
+  '/education': 'Education background',
+  '/clear': 'Clear screen',
+  '/help': 'Show available commands',
 }

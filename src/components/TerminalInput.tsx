@@ -17,6 +17,7 @@ const TerminalInput = forwardRef<TerminalInputHandle, TerminalInputProps>(
     const [cmdHistory, setCmdHistory] = useState<string[]>([])
     const [cmdIndex, setCmdIndex] = useState(-1)
     const [selectedCmd, setSelectedCmd] = useState<string | null>(null)
+    const [menuDismissed, setMenuDismissed] = useState(false)
     const inputRef = useRef<HTMLInputElement>(null)
 
     useImperativeHandle(ref, () => ({
@@ -28,7 +29,7 @@ const TerminalInput = forwardRef<TerminalInputHandle, TerminalInputProps>(
       if (!input.startsWith('/')) return []
       return allCommands.filter((cmd) => cmd.startsWith(input.toLowerCase()))
     }, [input, allCommands])
-    const showMenu = suggestions.length > 0 && input.startsWith('/') && !commands[input.toLowerCase()]
+    const showMenu = suggestions.length > 0 && input.startsWith('/') && !commands[input.toLowerCase()] && !menuDismissed
 
     const menuIndex = useMemo(() => {
       if (!showMenu) return -1
@@ -82,7 +83,7 @@ const TerminalInput = forwardRef<TerminalInputHandle, TerminalInputProps>(
         }
         if (e.key === 'Escape') {
           setSelectedCmd(null)
-          setInput('')
+          setMenuDismissed(true)
           return
         }
       }
@@ -131,7 +132,7 @@ const TerminalInput = forwardRef<TerminalInputHandle, TerminalInputProps>(
           ref={inputRef}
           className={styles.input}
           value={input}
-          onChange={(e) => setInput(e.target.value)}
+          onChange={(e) => { setInput(e.target.value); setMenuDismissed(false) }}
           onKeyDown={handleKeyDown}
           placeholder="Type a command..."
           autoFocus
