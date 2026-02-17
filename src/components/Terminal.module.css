@@ -2,7 +2,8 @@
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background: #1a1a2e;
+  background: var(--color-bg);
+  width: 100%;
   max-width: 720px;
   margin: 0 auto;
   padding-top: 48px;
@@ -11,32 +12,22 @@
 
 .output {
   flex: 1;
-  padding: 24px 24px 16px;
+  padding: 12px 4px 24px;
 }
 
 .line {
   white-space: pre-wrap;
   min-height: 1.5em;
-  color: #a8b2d1;
+  color: var(--color-text);
   line-height: 1.7;
 }
 
 .command {
-  color: #5de4c7;
+  color: var(--color-accent);
   margin-top: 8px;
   margin-bottom: 4px;
 }
 
 .error {
-  color: #f87171;
-}
-
-@media (max-width: 600px) {
-  .terminal {
-    padding-top: 24px;
-  }
-
-  .output {
-    padding: 16px;
-  }
+  color: var(--color-error);
 }

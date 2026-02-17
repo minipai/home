@@ -24,4 +24,6 @@ BackboneJS, CoffeeScript
 **Jun 2010 – Feb 2012**
 PSD-to-HTML studio
 
+----
+
 Type [/projects](/projects) to see what I build for fun.

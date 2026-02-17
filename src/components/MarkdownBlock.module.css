@@ -1,5 +1,5 @@
 .root {
-  color: #a8b2d1;
+  color: var(--color-text);
   line-height: 1.7;
   font-size: 1em;
 }
@@ -7,7 +7,7 @@
 .root h1,
 .root h2,
 .root h3 {
-  color: #e2a04a;
+  color: var(--color-heading);
   font-size: 1em;
   font-weight: 700;
   margin: 0.5em 0 0;
@@ -18,17 +18,17 @@
 }
 
 .root strong {
-  color: #6b7394;
+  color: var(--color-text-muted);
   font-weight: 600;
 }
 
 .root em {
-  color: #a8b2d1;
+  color: var(--color-text);
   font-style: italic;
 }
 
 .root a {
-  color: #5de4c7;
+  color: var(--color-accent);
   text-decoration: none;
 }
 
@@ -50,13 +50,13 @@
 }
 
 .root code {
-  color: #5de4c7;
+  color: var(--color-accent);
   font-family: inherit;
 }
 
 .root hr {
   border: none;
-  border-top: 1px solid #2a2a4a;
+  border-top: 1px dashed var(--color-border);
   margin: 0.75em 0;
 }
 
@@ -76,6 +76,6 @@
 }
 
 .root td:first-child {
-  color: #5de4c7;
+  color: var(--color-accent);
   white-space: nowrap;
 }

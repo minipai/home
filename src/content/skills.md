@@ -16,4 +16,6 @@ RESTful APIs · GraphQL · SDK development · RWD · SQLite
 ### Languages
 Mandarin (native) · English (professional)
 
+----
+
 Type [/resume](/resume) to see where I've worked.
