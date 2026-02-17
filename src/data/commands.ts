@@ -23,7 +23,7 @@ export const welcomeMarkdown = welcomeMd
 export const commandDescriptions: Record<string, string> = {
   '/about': 'Who am I',
   '/skills': 'Technical skills',
-  '/resume': 'Experience & education',
+  '/resume': 'Work history',
   '/projects': 'Side projects',
   '/reset': 'Clear screen',
   '/help': 'Show available commands',
