@@ -21,13 +21,12 @@ function Terminal() {
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
   }, [])
 
-  const typeBlocks = useCallback(
-    async (markdown: string) => {
+  const typeEntries = useCallback(
+    async (entries: OutputEntry[]) => {
       setIsTyping(true)
-      const blocks = parseMarkdownBlocks(markdown)
-      for (const block of blocks) {
+      for (const entry of entries) {
         await new Promise<void>((resolve) => {
-          setHistory((prev) => [...prev, { mode: 'html', content: block }])
+          setHistory((prev) => [...prev, entry])
           setTimeout(() => {
             scrollToBottom()
             resolve()
@@ -40,22 +39,10 @@ function Terminal() {
     [scrollToBottom]
   )
 
-  const typeTextLines = useCallback(
-    async (lines: string[], type?: TextType) => {
-      setIsTyping(true)
-      for (const line of lines) {
-        await new Promise<void>((resolve) => {
-          setHistory((prev) => [...prev, { mode: 'text', content: line, type }])
-          setTimeout(() => {
-            scrollToBottom()
-            resolve()
-          }, 25)
-        })
-      }
-      setIsTyping(false)
-      scrollToBottom()
-    },
-    [scrollToBottom]
+  const typeBlocks = useCallback(
+    (markdown: string) =>
+      typeEntries(parseMarkdownBlocks(markdown).map((block) => ({ mode: 'html', content: block }))),
+    [typeEntries]
   )
 
   useEffect(() => {
@@ -74,7 +61,7 @@ function Terminal() {
 
     setHistory((prev) => [
       ...prev,
-      { mode: 'text', content: `❯ ${cmd}`, type: 'command' as const },
+      { mode: 'text', content: `❯ ${cmd}`, type: 'command' },
     ])
 
     if (trimmed === '/reset') {
@@ -90,10 +77,10 @@ function Terminal() {
     } else if (trimmed === '') {
       // do nothing
     } else {
-      await typeTextLines(
-        [`Command not found: ${trimmed}`, 'Type /help for available commands.'],
-        'error'
-      )
+      await typeEntries([
+        { mode: 'text', content: `Command not found: ${trimmed}`, type: 'error' },
+        { mode: 'text', content: 'Type /help for available commands.', type: 'error' },
+      ])
     }
 
     setTimeout(() => inputRef.current?.focus(), 50)

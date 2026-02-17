@@ -5,26 +5,18 @@ import skillsMd from '../content/skills.md?raw'
 import resumeMd from '../content/resume.md?raw'
 import projectsMd from '../content/projects.md?raw'
 
-export interface CommandOutput {
+export interface Command {
   markdown: string
+  description: string
 }
 
-export const commands: Record<string, CommandOutput> = {
-  '/help': { markdown: helpMd },
-  '/about': { markdown: aboutMd },
-  '/skills': { markdown: skillsMd },
-  '/resume': { markdown: resumeMd },
-  '/projects': { markdown: projectsMd },
-  '/reset': { markdown: '' },
+export const commands: Record<string, Command> = {
+  '/help': { markdown: helpMd, description: 'Show available commands' },
+  '/about': { markdown: aboutMd, description: 'Who am I' },
+  '/skills': { markdown: skillsMd, description: 'Technical skills' },
+  '/resume': { markdown: resumeMd, description: 'Work history' },
+  '/projects': { markdown: projectsMd, description: 'Side projects' },
+  '/reset': { markdown: '', description: 'Clear screen' },
 }
 
 export const welcomeMarkdown = welcomeMd
-
-export const commandDescriptions: Record<string, string> = {
-  '/about': 'Who am I',
-  '/skills': 'Technical skills',
-  '/resume': 'Work history',
-  '/projects': 'Side projects',
-  '/reset': 'Clear screen',
-  '/help': 'Show available commands',
-}

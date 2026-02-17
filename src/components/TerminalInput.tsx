@@ -1,5 +1,5 @@
 import { useState, useRef, useMemo, useImperativeHandle, forwardRef, type KeyboardEvent } from 'react'
-import { commands, commandDescriptions } from '../data/commands'
+import { commands } from '../data/commands'
 import styles from './TerminalInput.module.css'
 
 interface TerminalInputProps {
@@ -24,7 +24,7 @@ const TerminalInput = forwardRef<TerminalInputHandle, TerminalInputProps>(
       focus: () => inputRef.current?.focus(),
     }))
 
-    const allCommands = useMemo(() => Object.keys(commandDescriptions), [])
+    const allCommands = useMemo(() => Object.keys(commands), [])
     const suggestions = useMemo(() => {
       if (!input.startsWith('/')) return []
       return allCommands.filter((cmd) => cmd.startsWith(input.toLowerCase()))
@@ -122,7 +122,7 @@ const TerminalInput = forwardRef<TerminalInputHandle, TerminalInputProps>(
                 onMouseEnter={() => navigateMenu(i)}
               >
                 <span className={styles.menuCmd}>{cmd}</span>
-                <span className={styles.menuDesc}>{commandDescriptions[cmd]}</span>
+                <span className={styles.menuDesc}>{commands[cmd].description}</span>
               </div>
             ))}
           </div>
