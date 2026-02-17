@@ -1,12 +1,10 @@
 ## Hi, I'm Art Pai
 
-Senior Front-End Engineer based in Melbourne, Australia.
+Senior Front-End Developer in Melbourne with 15+ years in web development.
 
-10+ years of experience building production-grade web
-applications using React and TypeScript.
+I build interfaces that are fast, accessible, and a joy to use — powered by TypeScript, React, and a background in design.
 
-Specialising in SPA architecture, design systems,
-developer-facing SDKs, and test-driven development.
+I care about clean code, solid testing, and shipping with confidence.
 
 ----
 

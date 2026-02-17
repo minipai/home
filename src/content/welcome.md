@@ -1,6 +1,6 @@
 # Art Pai
 
-**Senior Front-End Engineer**
+**Senior Front-End Developer**
 
 Welcome to my interactive portfolio.
 

@@ -1,20 +1,23 @@
 ### Core
-React · TypeScript · JavaScript (ES2015+) · Redux · HTML5 · CSS3/SASS
+TypeScript · React · Redux · HTML · CSS · Tailwind
 
-### Build & Tooling
-Vite · Vitest · Webpack · Babel · Gulp · Grunt
+### Tooling
+Vite · Git · pnpm · Storybook · Figma
 
 ### Testing
-TDD · Vitest · Jest
+Vitest · React Testing Library · Playwright
 
-### Architecture
-SPA · Component-driven development · State management · Design systems
+### Concepts
+UI/UX · RWD · a11y · i18n
 
-### Other
-RESTful APIs · GraphQL · SDK development · RWD · SQLite
+### Integration
+REST · GraphQL · OAuth/JWT · OpenAPI
 
-### Languages
-Mandarin (native) · English (professional)
+### Process
+TDD · Agile · Pair programming · CI/CD
+
+### Exposure
+Node.js · SQL · Docker · Redis · Hono
 
 ----
 
