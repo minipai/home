@@ -1,10 +1,10 @@
-## Hi, I'm Art Pai
+## From design to deploy
 
-Senior Front-End Developer in Melbourne.
 
-I build interfaces that are fast, accessible, and a joy to use — powered by TypeScript, React, and a background in design.
+I build fast, accessible interfaces with TypeScript and React. From component libraries to data-heavy dashboards, I bring a design eye to every detail.
 
-I care about clean code, solid testing, and shipping with confidence.
+
+I ship with confidence through clean architecture, solid tests, and automation. Pragmatic tooling and clear boundaries keep things maintainable as products grow.
 
 ----
 
