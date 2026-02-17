@@ -127,7 +127,17 @@ const TerminalInput = forwardRef<TerminalInputHandle, TerminalInputProps>(
             ))}
           </div>
         )}
-        <span className={styles.prompt}>❯</span>
+        <span
+          className={styles.prompt}
+          onMouseDown={(e) => {
+            e.preventDefault()
+            if (!input) {
+              setInput('/')
+              setMenuDismissed(false)
+            }
+            inputRef.current?.focus()
+          }}
+        >❯</span>
         <input
           ref={inputRef}
           className={styles.input}

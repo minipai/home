@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 import { commands, welcomeMarkdown } from '../data/commands'
 import TerminalInput, { type TerminalInputHandle } from './TerminalInput'
-import MarkdownBlock, { parseMarkdownBlocks } from './MarkdownBlock'
+import MarkdownBlock from './MarkdownBlock'
+import { parseMarkdownBlocks } from '../utils/markdown'
 import styles from './Terminal.module.css'
 
 type TextType = 'command' | 'error'
@@ -105,7 +106,7 @@ function Terminal() {
       <div className={styles.output}>
         {history.map((entry, i) =>
           entry.mode === 'html' ? (
-            <MarkdownBlock key={i} html={entry.content} />
+            <MarkdownBlock key={i} html={entry.content} onCommand={handleCommand} />
           ) : (
             <div
               key={i}

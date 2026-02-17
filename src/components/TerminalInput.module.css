@@ -51,6 +51,7 @@
   white-space: nowrap;
   user-select: none;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .input {

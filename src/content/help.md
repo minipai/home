@@ -2,9 +2,9 @@
 
 | Command | Description |
 |---------|-------------|
-| /about | Who am I |
-| /skills | Technical skills |
-| /resume | Experience & education |
-| /projects | Side projects |
-| /reset | Clear screen |
-| /help | Show this message |
+| [/about](/about) | Who am I |
+| [/skills](/skills) | Technical skills |
+| [/resume](/resume) | Experience & education |
+| [/projects](/projects) | Side projects |
+| [/reset](/reset) | Clear screen |
+| [/help](/help) | Show this message |

@@ -1,31 +1,33 @@
-import { useMemo } from 'react'
-import { marked } from 'marked'
+import { useCallback, useMemo, type MouseEvent } from 'react'
 import styles from './MarkdownBlock.module.css'
 
-marked.setOptions({ breaks: true })
-
-function splitHtmlBlocks(html: string): string[] {
-  const container = document.createElement('div')
-  container.innerHTML = html
-  const blocks: string[] = []
-  for (const child of container.childNodes) {
-    if (child instanceof HTMLElement) {
-      blocks.push(child.outerHTML)
-    } else if (child.textContent?.trim()) {
-      blocks.push(child.textContent)
-    }
-  }
-  return blocks
+interface MarkdownBlockProps {
+  html: string
+  onCommand?: (cmd: string) => void
 }
 
-export function parseMarkdownBlocks(markdown: string): string[] {
-  const html = marked.parse(markdown) as string
-  return splitHtmlBlocks(html)
-}
-
-function MarkdownBlock({ html }: { html: string }) {
+function MarkdownBlock({ html, onCommand }: MarkdownBlockProps) {
   const content = useMemo(() => ({ __html: html }), [html])
-  return <div className={styles.root} dangerouslySetInnerHTML={content} />
+
+  const handleClick = useCallback(
+    (e: MouseEvent) => {
+      const anchor = (e.target as HTMLElement).closest<HTMLAnchorElement>('a[href^="/"]')
+      if (anchor && onCommand) {
+        e.preventDefault()
+        e.stopPropagation()
+        onCommand(anchor.getAttribute('href')!)
+      }
+    },
+    [onCommand]
+  )
+
+  return (
+    <div
+      className={styles.root}
+      dangerouslySetInnerHTML={content}
+      onClick={handleClick}
+    />
+  )
 }
 
 export default MarkdownBlock

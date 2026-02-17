@@ -32,6 +32,10 @@
   text-decoration: none;
 }
 
+.root a[href^="/"] {
+  cursor: pointer;
+}
+
 .root a:hover {
   text-decoration: underline;
 }
