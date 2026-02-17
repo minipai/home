@@ -1,22 +1,22 @@
-### Core
+## Core
 TypeScript · React · Redux · HTML · CSS · Tailwind
 
-### Tooling
+## Tooling
 Vite · Git · pnpm · Storybook · Figma
 
-### Testing
+## Testing
 Vitest · React Testing Library · Playwright
 
-### Concepts
+## Concepts
 UI/UX · RWD · a11y · i18n
 
-### Integration
+## Integration
 REST · GraphQL · OAuth/JWT · OpenAPI
 
-### Process
+## Process
 TDD · Agile · Pair programming · CI/CD
 
-### Exposure
+## Exposure
 Node.js · SQL · Docker · Redis · Hono
 
 ----

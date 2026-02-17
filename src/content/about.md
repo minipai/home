@@ -1,6 +1,6 @@
 ## Hi, I'm Art Pai
 
-Senior Front-End Developer in Melbourne with 15+ years in web development.
+Senior Front-End Developer in Melbourne.
 
 I build interfaces that are fast, accessible, and a joy to use — powered by TypeScript, React, and a background in design.
 

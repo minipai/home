@@ -11,12 +11,12 @@ export interface Command {
 }
 
 export const commands: Record<string, Command> = {
-  '/help': { markdown: helpMd, description: 'Show available commands' },
   '/about': { markdown: aboutMd, description: 'Who am I' },
   '/skills': { markdown: skillsMd, description: 'Technical skills' },
   '/resume': { markdown: resumeMd, description: 'Work history' },
   '/projects': { markdown: projectsMd, description: 'Side projects' },
   '/reset': { markdown: '', description: 'Clear screen' },
+  '/help': { markdown: helpMd, description: 'Show available commands' },
 }
 
 export const welcomeMarkdown = welcomeMd

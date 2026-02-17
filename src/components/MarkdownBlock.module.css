@@ -4,13 +4,21 @@
   font-size: 1em;
 }
 
+.root h1 {
+  font-size: 1.5rem;
+}
+
+.root h2,
+.root h3 {
+  font-size: 1.2rem;
+}
+
 .root h1,
 .root h2,
 .root h3 {
   color: var(--color-heading);
-  font-size: 1em;
   font-weight: 700;
-  margin: 0.5em 0 0;
+  margin: 1em 0 0;
 }
 
 .root p {
